@@ -1,0 +1,9 @@
+.gruv {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    display: block;
+    color: red;
+  }
+}
