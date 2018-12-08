@@ -28,21 +28,21 @@ const paths = {
     },
     styles: {
         src: 'src/scss/*.scss',
-        dest: 'app/assets/styles/'
+        dest: 'app/styles/'
     },
     scripts: {
         src: 'src/js/*.js',
-        dest: 'app/assets/scripts/'
+        dest: 'app/scripts/'
     },
     images: {
         src: 'src/images/*.{jpg,jpeg,png}',
-        dest: 'app/assets/images/'
+        dest: 'app/images/'
     }
 };
 
 // define tasks
 function clean() {
-    return del(['app/assets']);
+    return del(['app']);
 }
 
 function html() {
