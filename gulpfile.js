@@ -11,7 +11,11 @@ const gulp = require('gulp'),
     babel = require('gulp-babel'),
     imagemin = require('gulp-imagemin'),
     gIf = require('gulp-if');
-
+var cache = require('gulp-cache');
+var imageminPngquant = require('imagemin-pngquant');
+var imageminZopfli = require('imagemin-zopfli');
+var imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
+var imageminGiflossy = require('imagemin-giflossy');
 
 // define isProd
 const isProd = false;
@@ -41,9 +45,9 @@ const paths = {
 };
 
 // define tasks
-function clean() {
+/*function clean() {
     return del(['app']);
-}
+}*/
 
 function html() {
     return gulp.src(paths.html.src)
@@ -79,7 +83,36 @@ function scripts() {
 
 function images() {
     return gulp.src(paths.images.src, {since: gulp.lastRun(images)})
-        .pipe(imagemin({optimizationLevel: 5}))
+        .pipe(cache(imagemin([
+            //png
+            imageminPngquant({
+                speed: 1
+            }),
+            imageminZopfli({
+                more: true
+                // iterations: 50 // very slow but more effective
+            }),
+            //gif
+            imageminGiflossy({
+                optimizationLevel: 3,
+                optimize: 3, //keep-empty: Preserve empty transparent frames
+                lossy: 2
+            }),
+            //svg
+            imagemin.svgo({
+                plugins: [{
+                    removeViewBox: false
+                }]
+            }),
+            //jpg lossless
+            imagemin.jpegtran({
+                progressive: true
+            }),
+            //jpg very light lossy, use vs jpegtran
+            imageminMozjpeg({
+                quality: 90
+            })
+        ])))
         .pipe(gulp.dest(paths.images.dest))
         .pipe(connect.reload());
 }
@@ -98,4 +131,4 @@ function watch() {
     gulp.watch(paths.images.src, images);
 }
 
-gulp.task('default', gulp.series(clean, gulp.parallel(html, styles, scripts, images, serve, watch)));
+gulp.task('default', gulp.series(gulp.parallel(html, styles, scripts, images, serve, watch)));
