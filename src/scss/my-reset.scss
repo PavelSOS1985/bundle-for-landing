@@ -1,0 +1,51 @@
+html, body {
+  overscroll-behavior: none;
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+// for bootstrap
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  content: normal;
+}
+

@@ -3,21 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="robots" content="index, follow, noodp">
-    <meta name="googlebot" content="index, follow">
-    <meta name="google" content="notranslate">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+    <meta name="keywords" content=""/>
+    <meta name="robots" content="index, follow, noodp"/>
+    <meta name="googlebot" content="index, follow"/>
+    <meta name="google" content="notranslate"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <title>Title</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
 </head>
-<body>
-<div class="gruv">click</div>hi world 111
+<body class="body">
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-5 col-sm-4 col-md-3">
+                <a href="#" class="header__logo">
+                    <img src="images/logo.png" alt="Логотип компании">
+                </a>
+            </div>
+            <div class="col-7 col-sm-8 col-md-9">
+                <div class="header__top">
+                    <div class="header__phones">
+                        <a href="tel:83952767646" class="link phone"><span class="header__code-phones">8 (3952)</span>
+                            72-72-39</a>
+                        <span class="header__icon-phone"><img src="images/tel-rouge.svg" alt=""></span>
+                        <a href="tel:83952767646" class="link phone"><span class="header__code-phones">8 (3952)</span>
+                            76-76-46</a>
+                    </div>
+                    <div class="header__button d-none d-sm-block">
+                        <button class="button button_header">
+                            обратный звонок
+                        </button>
+                    </div>
+                    <div class="mobile">
+                        <input class="mobile__toggle" id="toggle" type="checkbox">
+                        <label class="mobile__toggle-label" for="toggle">
+                            <span class="mobile__burger-top"></span>
+                            <span class="mobile__burger-center"></span>
+                            <span class="mobile__burger-bottom"></span>
+                        </label>
+                        <nav class="mobile__menu-wrap">
+                            <ul class="mobile__menu">
+                                <li class="mobile__menu-item"><a href="##" class="link ">ГЛАВНАЯ</a></li>
+                                <li class="mobile__menu-item"><a href="##" class="link ">О&nbsp;КОМПАНИИ</a></li>
+                                <li class="mobile__menu-item"><a href="##" class="link ">ПРАЙСЫ</a></li>
+                                <li class="mobile__menu-item"><a href="##" class="link ">СЕРТИФИКАТЫ</a></li>
+                                <li class="mobile__menu-item"><a href="##" class="link ">КОНТАКТЫ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <ul class="header__menu d-md-flex d-none">
+                    <li><a href="" class="link">ГЛАВНАЯ</a></li>
+                    <li><a href="" class="link">О&nbsp;КОМПАНИИ</a></li>
+                    <li><a href="" class="link">ПРАЙСЫ</a></li>
+                    <li><a href="" class="link">СЕРТИФИКАТЫ</a></li>
+                    <li><a href="" class="link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="header__menu d-md-none d-sm-flex d-none">
+            <li><a href="" class="link">ГЛАВНАЯ</a></li>
+            <li><a href="" class="link">О&nbsp;КОМПАНИИ</a></li>
+            <li><a href="" class="link">ПРАЙСЫ</a></li>
+            <li><a href="" class="link">СЕРТИФИКАТЫ</a></li>
+            <li><a href="" class="link">КОНТАКТЫ</a></li>
+        </ul>
 
-<script type="text/javascript" src="scripts/main.min.js"></script>
+    </div>
+</header>
+<main>
+    <section class="news">
+        <div class="container">
+            <div class="news__slider">
+                <div class="news__slide" style="background-image: url('images/news-2.jpg');">
+                    <div class="news__text">поздравляем с праздником!</div>
+                </div>
+                <div class="news__slide" style="background-image: url('images/slider-news-1.jpg');">
+                    <div class="news__text">новое поступление рукавиц</div>
+                </div>
+                <!--<figure class="news__slide">
+                    <img class="news__image" src="images/slider-news-1.jpg" alt="">
+                    <figcaption class="news__slide-explication">
+                        новое поступление рукавиц
+                    </figcaption>
+                </figure>
+                <figure class="news__slide">
+                    <img class="news__image" src="images/news-2.jpg" alt="">
+                    <figcaption class="news__slide-explication">
+                        новое поступление рукавиц
+                    </figcaption>
+                </figure>-->
+            </div>
+        </div>
+    </section>
+    <section class="assortment">
+        <div class="container">
+            <h2 class="title title_h2">Ассортимент</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-category">
+                        <img src="images/category.jpg" alt="фото категории" class="card-category__image">
+                        <p class="card-category__title">ткани</p>
+                    </div>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </section>
+</main>
+<script defer type="text/javascript" src="scripts/jquery.min.js"></script>
+<script defer type="text/javascript" src="scripts/main.min.js"></script>
+<script defer type="text/javascript" src="scripts/slick.min.js"></script>
 </body>
 </html>

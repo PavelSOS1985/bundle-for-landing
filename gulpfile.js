@@ -31,11 +31,11 @@ const paths = {
         dest: 'app'
     },
     styles: {
-        src: 'src/scss/*.scss',
+        src: 'src/scss/main.scss',
         dest: 'app/styles/'
     },
     scripts: {
-        src: 'src/js/*.js',
+        src: 'src/js/main.js',
         dest: 'app/scripts/'
     },
     images: {
@@ -126,7 +126,7 @@ function serve() {
 
 function watch() {
     gulp.watch(paths.html.src, html);
-    gulp.watch(paths.styles.src, styles);
+    gulp.watch('src/scss/*.scss', styles);
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.images.src, images);
 }

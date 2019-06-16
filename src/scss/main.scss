@@ -1,8 +1,41 @@
-@import "media";
-body {
-  background-color: green;
-  h1 {
-    background-color: blue;
-  }
-  display: block;
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/bootstrap-reboot";
+@import "my-reset";
+@import "fonts";
+@import "variables";
+@import "functions";
+@import "keyframes";
+
+.container {
+  max-width: 1170px;
 }
+html {
+  font-size: 100%;
+  @media (max-width: 1050px) {
+    font-size: 90%;
+
+  }
+  @media (max-width: 950px) {
+    font-size: 80%;
+
+  }
+  @media (max-width: 576px) {
+    font-size: 70%;
+
+  }
+}
+section {
+  padding: torem(60) 0 torem(60) 0;
+
+}
+/*blocks*/
+@import "header";
+@import "body";
+@import "button";
+@import "link";
+@import "phone";
+@import "mobile";
+@import "news";
+@import "title";
+@import "assortment";
+@import "card-category";

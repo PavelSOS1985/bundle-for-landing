@@ -1,0 +1,10 @@
+.card-category {
+  &__image {
+    border-radius: 5px;
+    margin-bottom: torem(25);
+  }
+  &__title {
+    font-size: torem(30);
+    letter-spacing: 0.75px;
+  }
+}

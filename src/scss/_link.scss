@@ -1,0 +1,27 @@
+.link {
+  position: relative;
+  line-height: 1;
+  transition: .5s;
+
+  &:hover {
+    color: $blue;
+    transition: .5s;
+
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $blue;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+
+  }
+  &:hover:after {
+    width: 100%;
+    transition: .5s;
+  }
+}

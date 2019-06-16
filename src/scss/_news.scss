@@ -1,0 +1,130 @@
+.news {
+  &__slider {
+    position: relative;
+    transition: 0.3s;
+    padding: 22% 0;
+    background-color: transparent;
+    .slick-list {
+      position: absolute;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    *:not(.news__text) {
+      height: 100%;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 20px 7px rgba(12, 55, 128, 0.2);
+      transition: 0.3s;
+
+      .news__arrow {
+        opacity: 1;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  &__slide {
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($black, 0.2);
+    }
+  }
+
+  &__text {
+    width: 70%;
+    position: absolute;
+    z-index: 9999;
+    bottom: 5%;
+    left: 5%;
+    color: #ffffff;
+    font-family: "BebasNeueBold", sans-serif;
+    font-size: torem(48);
+    line-height: 1;
+    letter-spacing: 1.2px;
+    text-shadow: 0 6px 20px rgba($black, 0.88);
+    /*background-color: rgba($black, 0.5);
+    padding: 6px 10px 4px 10px;*/
+    @media (max-width: 768px) {
+      font-size: torem(32);
+    }
+    @media (max-width: 576px) {
+      font-size: torem(24);
+    }
+  }
+
+  &__image {
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-color: $black;
+      opacity: 0.5;
+    }
+  }
+
+  &__slide-explication {
+
+
+  }
+
+  &__slider-wrap {
+    position: relative;
+  }
+
+  &__arrow {
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: torem(88);
+    height: torem(202) !important;
+    @media (max-width: 768px) {
+      height: torem(160) !important;
+    }
+    @media (max-width: 576px) {
+      display: none !important;
+    }
+
+    &_prev {
+      left: 0;
+      background-image: url("../images/arrow-prev.png");
+
+    }
+
+    &_next {
+      right: 0;
+      background-image: url("../images/arrow-next.png");
+      background-position: 100% 0;
+    }
+  }
+}
