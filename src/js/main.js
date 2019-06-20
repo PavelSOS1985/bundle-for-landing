@@ -103,6 +103,29 @@ window.onload = function () {
             }
         ]
     });
+    $('.comments__slider').slick({
+/*
+        autoplay: true,
+*/
+        autoplaySpeed: 1000,
+        slidesToShow: 4,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
 
     /* паралакс */
         $('.main-content').parallax({imageSrc: 'images/bg-body.jpg'});

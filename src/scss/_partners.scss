@@ -9,6 +9,9 @@
   }
   &__img-wrap {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover:after {
       background-color: rgba(white, 0);
       transition: .3s;

@@ -25,4 +25,9 @@
   @media (max-width: 390px) {
     display: none;
   }
+  &_mini {
+    width: torem(20);
+    height: torem(20);
+    margin: 0 5px;
+  }
 }

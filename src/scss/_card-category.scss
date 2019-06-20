@@ -1,8 +1,10 @@
 .card-category {
+  display: block;
   margin-top: torem(30);
   position: relative;
   padding: 0 torem(20);
   transition: .8s;
+  cursor: inherit;
   &:hover .card-category__title {
     z-index: 1;
     left: 50%;
@@ -10,7 +12,7 @@
   }
 
   &:hover .block_scale {
-    opacity: 1;
+    display: flex;
     z-index: 1;
     transition: opacity .5s;
   }
