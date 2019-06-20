@@ -1,4 +1,76 @@
 .why-we {
   padding: torem(60) 0 torem(60) 0;
+  @media (max-width: 768px){
 
+  }
+  &__card {
+    cursor: pointer;
+    text-align: center;
+    transition: .3s;
+    padding: torem(45) torem(45) torem(45) torem(45);
+    @media (max-width: 768px) {
+      padding: torem(30) torem(30) torem(30) torem(30);
+
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transition: .3s;
+      @media (max-width: 1200px) {
+        transform: scale(1.05);
+
+      }
+      @media (max-width: 992px) {
+        transform: scale(1.03);
+
+      }
+    }
+    @media (max-width: 767.99px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+  }
+  &__icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: torem(55);
+    @media (max-width: 992px) {
+      margin-bottom: torem(25);
+    }
+    @media (max-width: 767.99px) {
+      margin-bottom: torem(0);
+      margin-right: torem(20);
+      max-width: 30%;
+    }
+    img {
+      max-height: 154px;
+      @media (max-width: 767.99px) {
+        min-width: 70px;
+      }
+    }
+
+  }
+  &__text-wrap {
+    @media (max-width: 767.99px) {
+      flex-grow: 1;
+    }
+  }
+  &__text {
+    font-size: torem(24);
+    line-height: 1.5em;
+    letter-spacing: 1.2px;
+    max-width: torem(300);
+    display: block;
+    text-align: center;
+    @media (max-width: 767.99px) {
+      letter-spacing: 0.6px;
+      font-size: torem(18);
+      max-width: 100%;
+
+
+    }
+  }
 }
