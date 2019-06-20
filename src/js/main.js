@@ -59,6 +59,50 @@ window.onload = function () {
         prevArrow: '<div class="news__arrow news__arrow_prev"></div>',
         nextArrow: '<div class="news__arrow news__arrow_next"></div>'
     });
+    $('.partners__slider').slick({
+        autoplay: true,
+        centerMode: true,
+        centerPadding: '90px',
+        slidesToShow: 3,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    centerPadding: '40px',
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    centerPadding: '160px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 520,
+                settings: {
+                    centerPadding: '120px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 430,
+                settings: {
+                    centerPadding: '90px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 370,
+                settings: {
+                    centerPadding: '60px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 
     /* паралакс */
         $('.main-content').parallax({imageSrc: 'images/bg-body.jpg'});
