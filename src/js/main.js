@@ -104,9 +104,7 @@ window.onload = function () {
         ]
     });
     $('.comments__slider').slick({
-/*
         autoplay: true,
-*/
         autoplaySpeed: 1000,
         slidesToShow: 4,
         dots: false,
