@@ -24,14 +24,10 @@ html {
 
   }
 }
-section {
-  padding: torem(60) 0 torem(60) 0;
 
-}
 /*blocks*/
 @import "header";
 @import "body";
-@import "button";
 @import "link";
 @import "phone";
 @import "mobile";
@@ -39,3 +35,12 @@ section {
 @import "title";
 @import "assortment";
 @import "card-category";
+@import "block";
+@import "btn";
+@import "main-content";
+@import "fixed-header";
+@import "logo";
+@import "icon-phone";
+@import "menu";
+@import "partners";
+

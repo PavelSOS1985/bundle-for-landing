@@ -1,4 +1,13 @@
 .phone {
   font-family: "BebasNeueBold", sans-serif;
   white-space: nowrap;
+  &__code {
+    color: $grey;
+  }
+  &_sticky {
+    @media (max-width: 520px){
+
+    }
+  }
+
 }

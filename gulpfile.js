@@ -7,6 +7,7 @@ const gulp = require('gulp'),
     cleancss = require('gulp-clean-css'),
     del = require('del'),
     connect = require('gulp-connect'),
+    browserSync = require('browser-sync').create(),
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
     imagemin = require('gulp-imagemin'),
@@ -52,7 +53,8 @@ const paths = {
 function html() {
     return gulp.src(paths.html.src)
         .pipe(gulp.dest(paths.html.dest))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
+        /*.pipe(connect.reload());*/
 }
 
 function styles() {
@@ -67,7 +69,8 @@ function styles() {
         .pipe(cleancss())
         .pipe(gIf(!isProd, maps.write()))
         .pipe(gulp.dest(paths.styles.dest))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
+        /*.pipe(connect.reload());*/
 }
 
 function scripts() {
@@ -78,7 +81,8 @@ function scripts() {
         .pipe(gIf(isProd, uglify()))
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest(paths.scripts.dest))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
+        /*.pipe(connect.reload());*/
 }
 
 function images() {
@@ -114,7 +118,8 @@ function images() {
             })
         ])))
         .pipe(gulp.dest(paths.images.dest))
-        .pipe(connect.reload());
+        .pipe(browserSync.stream());
+        /*.pipe(connect.reload());*/
 }
 
 function serve() {
@@ -124,6 +129,13 @@ function serve() {
     });
 }
 
+function bs() {
+    browserSync.init({
+        server: {
+            baseDir: "./app"
+        }
+    });
+}
 function watch() {
     gulp.watch(paths.html.src, html);
     gulp.watch('src/scss/*.scss', styles);
@@ -131,4 +143,4 @@ function watch() {
     gulp.watch(paths.images.src, images);
 }
 
-gulp.task('default', gulp.series(gulp.parallel(html, styles, scripts, images, serve, watch)));
+gulp.task('default', gulp.series(gulp.parallel(html, styles, scripts, images, /*serve*/bs, watch)));

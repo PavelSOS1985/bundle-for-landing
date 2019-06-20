@@ -1,7 +1,8 @@
 .body {
+  background-image: url("../images/bg-body.jpg");
   color: $black;
   font-family: "BebasNeueRegular", sans-serif;
   line-height: 1;
-  background: url("../images/bg-body.jpg");
-  background-size: cover;
+  position: relative;
+  scroll-behavior: smooth;
 }

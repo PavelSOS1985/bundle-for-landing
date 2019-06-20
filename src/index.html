@@ -18,47 +18,54 @@
     <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
 </head>
 <body class="body">
-<header class="header">
+<header data-depth="0.2" id="header" class="header header_normal">
     <div class="container">
         <div class="row">
-            <div class="col-5 col-sm-4 col-md-3">
-                <a href="#" class="header__logo">
+            <div id="header-left-col" class="col-5 col-sm-4 col-md-3">
+                <a id="header-logo" href="#" class="logo">
                     <img src="images/logo.png" alt="Логотип компании">
                 </a>
             </div>
-            <div class="col-7 col-sm-8 col-md-9">
-                <div class="header__top">
-                    <div class="header__phones">
-                        <a href="tel:83952767646" class="link phone"><span class="header__code-phones">8 (3952)</span>
-                            72-72-39</a>
-                        <span class="header__icon-phone"><img src="images/tel-rouge.svg" alt=""></span>
-                        <a href="tel:83952767646" class="link phone"><span class="header__code-phones">8 (3952)</span>
-                            76-76-46</a>
+            <div id="header-right-col" class="col-7 col-sm-8 col-md-9">
+                <div id="header-right-wrapper" class="header__top header__top_normal">
+                    <div id="header-phones" class="header__phones header__phones_normal">
+                        <a href="tel:83952767646" class="link phone">
+                            <span class="phone__code">8 (3952)</span>72-72-39</a>
+                        <span id="header-icon-phone" class="icon-phone icon-phone_normal"><img
+                                src="images/icon-phone.png" alt=""></span>
+                        <a id="header-second-phone" href="tel:83952767646" class="link phone">
+                            <span class="phone__code">8 (3952)</span>76-76-46</a>
                     </div>
-                    <div class="header__button d-none d-sm-block">
-                        <button class="button button_header">
+                    <div id="header-btn" class="header__button header__button_normal">
+                        <button class="btn btn_blue">
                             обратный звонок
                         </button>
                     </div>
-                    <div class="mobile">
-                        <input class="mobile__toggle" id="toggle" type="checkbox">
-                        <label class="mobile__toggle-label" for="toggle">
+                    <div id="header-mobile" class="mobile mobile_normal">
+                        <input class="mobile__toggle mobile__toggle_normal" id="toggle" type="checkbox">
+                        <label id="burger" class="mobile__toggle-label" for="toggle">
                             <span class="mobile__burger-top"></span>
                             <span class="mobile__burger-center"></span>
                             <span class="mobile__burger-bottom"></span>
                         </label>
-                        <nav class="mobile__menu-wrap">
-                            <ul class="mobile__menu">
-                                <li class="mobile__menu-item"><a href="##" class="link ">ГЛАВНАЯ</a></li>
-                                <li class="mobile__menu-item"><a href="##" class="link ">О&nbsp;КОМПАНИИ</a></li>
-                                <li class="mobile__menu-item"><a href="##" class="link ">ПРАЙСЫ</a></li>
-                                <li class="mobile__menu-item"><a href="##" class="link ">СЕРТИФИКАТЫ</a></li>
-                                <li class="mobile__menu-item"><a href="##" class="link ">КОНТАКТЫ</a></li>
+                        <nav class="mobile__menu mobile__menu_normal">
+                            <ul>
+                                <li class="mobile__menu-item mobile__menu-item_normal"><a href="##" class="link ">ГЛАВНАЯ</a>
+                                </li>
+                                <li class="mobile__menu-item mobile__menu-item_normal"><a href="##" class="link ">О&nbsp;КОМПАНИИ</a>
+                                </li>
+                                <li class="mobile__menu-item mobile__menu-item_normal"><a href="##"
+                                                                                          class="link ">ПРАЙСЫ</a>
+                                </li>
+                                <li class="mobile__menu-item mobile__menu-item_normal"><a href="##" class="link ">СЕРТИФИКАТЫ</a>
+                                </li>
+                                <li class="mobile__menu-item mobile__menu-item_normal"><a href="##" class="link ">КОНТАКТЫ</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <ul class="header__menu d-md-flex d-none">
+                <ul id="header-menu" class="header__menu header__menu_right">
                     <li><a href="" class="link">ГЛАВНАЯ</a></li>
                     <li><a href="" class="link">О&nbsp;КОМПАНИИ</a></li>
                     <li><a href="" class="link">ПРАЙСЫ</a></li>
@@ -67,17 +74,16 @@
                 </ul>
             </div>
         </div>
-        <ul class="header__menu d-md-none d-sm-flex d-none">
+        <ul id="header-menu-bottom" class="header__menu header__menu_bottom">
             <li><a href="" class="link">ГЛАВНАЯ</a></li>
             <li><a href="" class="link">О&nbsp;КОМПАНИИ</a></li>
             <li><a href="" class="link">ПРАЙСЫ</a></li>
             <li><a href="" class="link">СЕРТИФИКАТЫ</a></li>
             <li><a href="" class="link">КОНТАКТЫ</a></li>
         </ul>
-
     </div>
 </header>
-<main>
+<main class="main-content">
     <section class="news">
         <div class="container">
             <div class="news__slider">
@@ -87,18 +93,6 @@
                 <div class="news__slide" style="background-image: url('images/slider-news-1.jpg');">
                     <div class="news__text">новое поступление рукавиц</div>
                 </div>
-                <!--<figure class="news__slide">
-                    <img class="news__image" src="images/slider-news-1.jpg" alt="">
-                    <figcaption class="news__slide-explication">
-                        новое поступление рукавиц
-                    </figcaption>
-                </figure>
-                <figure class="news__slide">
-                    <img class="news__image" src="images/news-2.jpg" alt="">
-                    <figcaption class="news__slide-explication">
-                        новое поступление рукавиц
-                    </figcaption>
-                </figure>-->
             </div>
         </div>
     </section>
@@ -106,23 +100,102 @@
         <div class="container">
             <h2 class="title title_h2">Ассортимент</h2>
             <div class="row">
-                <div class="col-4">
+                <div class="offset-2 col-8 offset-sm-1 col-sm-5 offset-lg-0 col-lg-4 ">
                     <div class="card-category">
-                        <img src="images/category.jpg" alt="фото категории" class="card-category__image">
+                        <div class="block block_scale">
+                            <button class="btn btn_yellow-border">Подробнее</button>
+                        </div>
+                        <div class="card-category__image-wrap">
+                            <p class="card-category__excerpt">Краткое описание категории Краткое описание
+                                категории
+                                Краткое описание категории Краткое описание категории</p>
+                            <img src='images/category.jpg'
+                                 class="card-category__image" alt=""/>
+                        </div>
                         <p class="card-category__title">ткани</p>
                     </div>
                 </div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
+                <div class="offset-2 col-8 offset-sm-0 col-sm-5 col-lg-4">
+                    <div class="card-category">
+                        <div class="block block_scale">
+                            <button class="btn btn_yellow-border">Подробнее</button>
+                        </div>
+                        <div class="card-category__image-wrap">
+                            <p class="card-category__excerpt">Краткое описание категории</p>
+                            <img alt="" src='images/category.jpg'
+                                 class="card-category__image"/>
+                        </div>
+                        <p class="card-category__title">постельное белье</p>
+                    </div>
+                </div>
+                <div class="offset-2 col-8 offset-sm-1 col-sm-5 offset-lg-0 col-lg-4 ">
+                    <div class="card-category">
+                        <div class="block block_scale">
+                            <button class="btn btn_yellow-border">Подробнее</button>
+                        </div>
+                        <div class="card-category__image-wrap">
+                            <p class="card-category__excerpt">Краткое описание категории Краткое описание
+                                категории
+                                Краткое описание категории Краткое описание категории</p>
+                            <img src='images/category.jpg'
+                                 class="card-category__image" alt=""/>
+                        </div>
+                        <p class="card-category__title">ткани</p>
+                    </div>
+                </div>
+                <div class="offset-2 col-8 offset-sm-0 col-sm-5 col-lg-4">
+                    <div class="card-category">
+                        <div class="block block_scale">
+                            <button class="btn btn_yellow-border">Подробнее</button>
+                        </div>
+                        <div class="card-category__image-wrap">
+                            <p class="card-category__excerpt">Краткое описание категории</p>
+                            <img alt="" src='images/category.jpg'
+                                 class="card-category__image"/>
+                        </div>
+                        <p class="card-category__title">постельное белье</p>
+                    </div>
+                </div>
+                <div class="offset-2 col-8 offset-sm-1 col-sm-5 offset-lg-0 col-lg-4 ">
+                    <div class="card-category">
+                        <div class="block block_scale">
+                            <button class="btn btn_yellow-border">Подробнее</button>
+                        </div>
+                        <div class="card-category__image-wrap">
+                            <p class="card-category__excerpt">Краткое описание категории Краткое описание
+                                категории
+                                Краткое описание категории Краткое описание категории</p>
+                            <img src='images/category.jpg'
+                                 class="card-category__image" alt=""/>
+                        </div>
+                        <p class="card-category__title">ткани</p>
+                    </div>
+                </div>
+                <div class="offset-2 col-8 offset-sm-0 col-sm-5 col-lg-4">
+                    <div class="card-category">
+                        <div class="block block_scale">
+                            <button class="btn btn_yellow-border">Подробнее</button>
+                        </div>
+                        <div class="card-category__image-wrap">
+                            <p class="card-category__excerpt">Краткое описание категории</p>
+                            <img alt="" src='images/category.jpg'
+                                 class="card-category__image"/>
+                        </div>
+                        <p class="card-category__title">постельное белье</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <section class="partners">
+        
+    </section>
 </main>
+
 <script defer type="text/javascript" src="scripts/jquery.min.js"></script>
-<script defer type="text/javascript" src="scripts/main.min.js"></script>
 <script defer type="text/javascript" src="scripts/slick.min.js"></script>
+<script defer type="text/javascript" src="scripts/parallax.min.js"></script>
+<script defer type="text/javascript" src="scripts/main.min.js"></script>
+
 </body>
 </html>

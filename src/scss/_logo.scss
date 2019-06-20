@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  max-width: 242px;
+  transition: .3s;
+  &_sticky {
+    transition: .3s;
+    max-width: 120px;
+  }
+}

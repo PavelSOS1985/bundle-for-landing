@@ -1,0 +1,17 @@
+.menu {
+  top: 105%;
+  right: 0;
+  background-color: $yellow;
+  padding: torem(10) 0;
+
+  &__wrap {
+    &_sticky {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+    }
+
+  }
+
+}

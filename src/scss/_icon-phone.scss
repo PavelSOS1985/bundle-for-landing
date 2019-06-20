@@ -1,0 +1,28 @@
+.icon-phone {
+  display: block;
+  width: torem(36);
+  height: torem(36);
+  margin: 5px 15px;
+  &_normal {
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      left: -40px;
+    }
+  }
+  &_sticky {
+    @media (max-width: 520px) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      left: -40px;
+    }
+
+  }
+  @media (max-width: 390px) {
+    display: none;
+  }
+}

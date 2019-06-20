@@ -1,0 +1,50 @@
+.btn {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  font-size: torem(18);
+  cursor: pointer;
+  overflow: hidden;
+  width: 12em;
+  height: 2.4em;
+  transition: 0.5s;
+  &_blue {
+    font-family: "BebasNeueBold", sans-serif;
+    letter-spacing: 1.5px;
+    color: white;
+    background: $blue;
+    &:after {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 200px;
+      background: #fff;
+      position: absolute;
+      left: -80px;
+      top: -40px;
+      z-index: 1;
+      transform: rotate(45deg);
+      transition: all 0.1s;
+      animation-name: blick;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-duration: 4s;
+      animation-fill-mode: none;
+    }
+    &:hover {
+      color: $blue;
+      background-color: white;
+      transition: 0.5s;
+    }
+  }
+  &_yellow-border {
+    margin: 0 auto;
+    transition: .5s;
+    border: 2px solid $yellow;
+    letter-spacing: 1.35px;
+    &:hover {
+      background-color: $yellow;
+      transition: .5s;
+    }
+  }
+}
