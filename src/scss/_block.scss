@@ -2,8 +2,9 @@
   display: block;
   background-color: #fff;
   border-radius: 5px;
-
+  transition: .3s;
   &:hover {
+    transition: .3s;
     box-shadow: 0 6px 20px 7px rgba(12, 55, 128, 0.22);
   }
 
@@ -28,6 +29,6 @@
   }
 
   &_with-paddings {
-
+    padding: 1em;
   }
 }

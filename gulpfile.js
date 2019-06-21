@@ -76,7 +76,7 @@ function styles() {
 function scripts() {
     return gulp.src(paths.scripts.src)
         .pipe(babel({
-            presets: ['@babel/env']
+            "presets": ["env"]
         }))
         .pipe(gIf(isProd, uglify()))
         .pipe(concat('main.min.js'))

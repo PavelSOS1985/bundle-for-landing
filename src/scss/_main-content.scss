@@ -1,6 +1,19 @@
 .main-content {
-  /*background-image: url("../images/bg-body.jpg");
-  background-attachment: fixed;
-  background-size: contain;
-  padding-top: 80px;*/
+  padding-top: torem(156);
+  @media (max-width: 992px) {
+    padding-top: torem(140);
+
+  }
+  @media (max-width: 576px) {
+    padding-top: torem(110);
+
+  }
+  @media (max-width: 450px) {
+    padding-top: torem(90);
+
+  }
+  @media (max-width: 380px) {
+    padding-top: torem(80);
+
+  }
 }

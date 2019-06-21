@@ -1,20 +1,12 @@
 window.onload = function () {
 
     /* работа мобильного меню*/
-    const mobileMenuItems = [...document.querySelectorAll(".mobile__menu-item_normal")];
-    const mobileMenuItemsSticky = [...document.querySelectorAll(".mobile__menu-item_sticky")];
+    const mobileMenuItems = document.querySelectorAll(".mobile__menu-item_normal");
     const burger = document.querySelector("#burger");
-    const mobileToggleSticky = document.querySelector("#burger-sticky");
-    const mobile = [...document.querySelectorAll(".mobile__toggle-label")];
-
-    console.log(mobile);
 
     function openMenu(items) {
         let currentIndex = 0;
         let delay = 200;
-        /*
-                items[currentIndex].classList.contains("mobile__menu-item_open") ? delay = 0 : delay = 200;
-        */
         let int = setInterval(function () {
             items[currentIndex].classList.add("mobile__menu-item_open");
             currentIndex++;
@@ -38,15 +30,13 @@ window.onload = function () {
         }, delay);
     }
 
-        burger.onclick = function () {
-            if (mobileMenuItems[0].classList.contains("mobile__menu-item_open")) {
-                console.log("click-close");
-                closeMenu(mobileMenuItems)
-            } else {
-                console.log("click-open");
-                openMenu(mobileMenuItems)
-            }
-        };
+    burger.onclick = function () {
+        if (mobileMenuItems[0].classList.contains("mobile__menu-item_open")) {
+            closeMenu(mobileMenuItems)
+        } else {
+            openMenu(mobileMenuItems)
+        }
+    };
 
     /* slick slider - news  */
     $('.news__slider').slick({
@@ -126,7 +116,7 @@ window.onload = function () {
     });
 
     /* паралакс */
-        $('.main-content').parallax({imageSrc: 'images/bg-body.jpg'});
+    $('.main-content').parallax({imageSrc: 'images/bg-body.jpg'});
 
     /* transform menu */
     const header = document.querySelector("#header");
@@ -141,9 +131,6 @@ window.onload = function () {
     const headerMobile = document.querySelector("#header-mobile");
     const headerMenu = document.querySelector("#header-menu");
     const headerMenuBottom = document.querySelector("#header-menu-bottom").classList;
-    const mainContent = document.querySelector(".main-content");
-    let headerHeight = String(header.offsetHeight);
-    mainContent.style.paddingTop = headerHeight + "px";
 
     window.onscroll = function () {
         let scroll = window.pageYOffset || document.documentElement.scrollTop;
